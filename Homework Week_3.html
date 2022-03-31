@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House Plants</title>
+    <style>
+      div {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 15px 50px;
+        font-family: cursive;
+      }
+      h1 {
+        text-align: center;
+        color: cadetblue;
+      }
+      h2 {
+        text-align: center;
+        font-size: 22px;
+        border: 2px;
+        padding: 20px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+      }
+      p {
+        font-size: 15px;
+        margin: 20px 0 15px;
+      }
+      button {
+        display: block;
+        margin: 15px auto;
+        color: white;
+        background: darkcyan;
+        font-size: 15px;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+        box-shadow: 5px 5px 10px rgba(red, green, blue, alpha);
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+
+      .more-info {
+        color: seagreen;
+        text-decoration: none;
+        font-size: 15px;
+        text-align: center;
+      }
+      .more-info:hover {
+        text-decoration: underline;
+      }
+      p2 {
+        font-size: 12px;
+        margin: 20px 0 15px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1><strong> House Plants </strong></h1>
+
+      <span> <h2>Prayer Plant is special</h2> </span>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0662/5489/products/Ctenanthe_burle-marxii_-_pistils_nursery_1056x1376.jpg?v=1609194747"
+        alt="prayer plant"
+        width="400"
+      />
+      <p>
+        Prayer plant, (Maranta leuconeura), also called <em>praying hands</em>,
+        flowering plant of the family Marantaceae, native to the New World
+        tropics. It has spreading leaves that turn upward toward evening,
+        seemingly in prayer for evening vespers. The plant can be grown as a
+        ground cover in suitable climates and is a common houseplant in
+        temperate regions.
+      </p>
+      <a
+        href="https://www.britannica.com/plant/prayer-plant"
+        target="_blank"
+        class="more-info"
+      >
+        More info on Britannica
+      </a>
+      <br />
+      <button class="purchase-button">Buy Indoor Plant</button>
+      <br />
+      <hr />
+      <p2>This page was built by Iryna Agafonov </p2>
+      <hr />
+    </div>
+    <script>
+      function purchase() {
+        let name = prompt("What is your first name?");
+        let question = prompt("Do you like house plants?");
+
+        if (question >= "yes") {
+          alert(
+            "Dear " + name + ", congratulations, you get 15% discount code!"
+          );
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "Hello," + name + "!  Pick your favourite plant!";
+        } else {
+          alert("Sorry, " + name + ". You cannot get discount code.");
+
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "Hello," + name + ". I hope you will like our plants.";
+        }
+      }
+      let buyButton = document.querySelector(".purchase-button");
+      buyButton.addEventListener("click", purchase);
+    </script>
+  </body>
+</html>
